@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>API_Gateway</RootNamespace>
+		<UserSecretsId>2fa32e54-6efb-44af-af02-94f03737c6ff</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+		<PackageReference Include="Rebus" Version="7.0.0" />
+		<PackageReference Include="Rebus.RabbitMq" Version="8.0.0" />
+		<PackageReference Include="Rebus.Serilog" Version="7.0.0" />
+		<PackageReference Include="Rebus.ServiceProvider" Version="8.4.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+		<PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="5.0.1" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="SharedTypes">
+	    <HintPath>..\..\SharedTypes\SharedTypes\bin\Debug\net7.0\SharedTypes.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
