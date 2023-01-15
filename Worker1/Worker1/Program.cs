@@ -1,7 +1,6 @@
 
 using Rebus.Activation;
 using Rebus.Config;
-using Rebus.Messages;
 using Rebus.Routing.TypeBased;
 using SharedTypes.Messages;
 
@@ -27,12 +26,8 @@ namespace Worker1
 
             var subscriber = Configure.With(activator)
                 .Transport(t => t.UseRabbitMq(connectionString, channel))
-                .Routing(r => r.TypeBased().MapAssemblyOf<Request>("myPublisher"))
+                //.Routing(r => r.TypeBased().MapAssemblyOf<Request>("publisher")) //This needs to be correct somehow
                 .Start();
-
-            //var publisher = Configure.With(activator)
-            //    .Transport(t => t.UseRabbitMq(connectionString, channel))
-            //    .Start();
             
             subscriber.Subscribe<Request>().Wait();
 

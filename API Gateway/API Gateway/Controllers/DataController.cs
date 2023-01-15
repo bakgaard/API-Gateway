@@ -45,7 +45,7 @@ namespace API_Gateway.Controllers
             await _bus.Subscribe<Response>();
 
             //Send data
-            await _bus.Publish(messageToPass);
+            await _bus.Publish(messageToPass, header);
 
             _logger.Debug("Completed {0}", nameof(UseRabbitMq));
             return Ok("Call successful!");

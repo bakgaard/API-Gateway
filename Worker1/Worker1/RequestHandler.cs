@@ -20,7 +20,7 @@ namespace Worker1
             var messageId = Guid.NewGuid().ToString();
             var headers = new Dictionary<string, string>
             {
-                { "rbs2-corr-id", message.Headers["rbs2-msg-id"] }, //Attach whom we respond to
+                { "rbs2-corr-id", message.Headers["rbs2-msg-id"] }, //Attach to whom we respond to
                 { "rbs2-msg-id", messageId },
                 { "rbs2-senttime", DateTime.Now.ToString() },
             };
