@@ -1,6 +1,6 @@
 # .NET API Gateway
 
-This project is a short demo for myself to see if I can create an [API Gateway](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern) to retrieve requests as REST, but processes them through [RabbitMQ](https://www.rabbitmq.com/) with [RebusMQ](https://github.com/rebus-org/Rebus).
+This project is a short demo for myself to see if I can create an [API Gateway](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern) to retrieve requests as REST, but processes them through [RabbitMQ](https://www.rabbitmq.com/) with [Rebus](https://github.com/rebus-org/Rebus).
 
 
 ## To launch it
